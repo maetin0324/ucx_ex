@@ -7,6 +7,7 @@ edition = "2021"
 
 [dependencies]
 async-ucx = { version = "0.1.1", features = ["am"] }
+console-subscriber = "0.3.0"
 env_logger = "0.11.3"
 tokio = { version = "1.29.1", features = [
     "rt-multi-thread",
@@ -16,3 +17,4 @@ tokio = { version = "1.29.1", features = [
     "sync",
     "rt",
 ] }
+

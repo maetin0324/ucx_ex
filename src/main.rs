@@ -5,8 +5,9 @@ use std::io::Result;
 use std::mem::{transmute,MaybeUninit};
 use std::sync::atomic::*;
 
-#[tokio::main]
+#[tokio::main(flavor = "current_thread")]
 async fn main() -> Result<()> {
+    console_subscriber::init();
     env_logger::init();
     let local = tokio::task::LocalSet::new();
     if let Some(server_addr) = std::env::args().nth(1) {
